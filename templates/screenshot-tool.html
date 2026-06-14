@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Screenshot Tool</title>
+
+<link rel="stylesheet"
+href="{{ url_for('static',
+filename='css/style.css') }}">
+</head>
+
+<body>
+
+<div class="converter-box">
+
+<h1>Screenshot Tool</h1>
+
+<form method="POST"
+action="/take-screenshot">
+
+<input
+type="url"
+name="url"
+placeholder="https://example.com"
+required>
+
+<button type="submit">
+Take Screenshot
+</button>
+
+</form>
+
+</div>
+
+</body>
+</html>

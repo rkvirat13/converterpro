@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>PDF Compress</title>
+    <link rel="stylesheet"
+    href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+
+<div class="converter-box">
+
+<h1>PDF Compress</h1>
+
+<form action="/compress-pdf"
+method="POST"
+enctype="multipart/form-data">
+
+<input type="file"
+name="pdf"
+required>
+
+<br><br>
+
+<button type="submit">
+Compress PDF
+</button>
+
+</form>
+
+</div>
+
+</body>
+</html>

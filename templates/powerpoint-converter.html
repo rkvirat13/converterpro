@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+<title>PowerPoint Converter</title>
+
+<link rel="stylesheet"
+href="{{ url_for('static', filename='css/style.css') }}">
+
+</head>
+<body>
+
+<div class="converter-box">
+
+<h1>PowerPoint Converter</h1>
+
+<form method="POST"
+action="/convert-powerpoint"
+enctype="multipart/form-data">
+
+<input
+type="file"
+name="ppt"
+accept=".ppt,.pptx"
+required>
+
+<select name="format">
+
+<option value="txt">PPTX → TXT</option>
+<option value="json">PPTX → JSON</option>
+<option value="pdf">PPTX → PDF</option>
+
+</select>
+
+<button type="submit">
+Convert PowerPoint
+</button>
+
+</form>
+
+</div>
+
+</body>
+</html>

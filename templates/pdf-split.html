@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>PDF Split</title>
+
+<link rel="stylesheet"
+href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+
+<body>
+
+<div class="converter-box">
+
+<h1>PDF Split Tool</h1>
+
+<form action="/split-pdf"
+method="POST"
+enctype="multipart/form-data">
+
+<input type="file"
+name="pdf"
+required>
+
+<br><br>
+
+<input type="number"
+name="page"
+placeholder="Enter Page Number"
+required>
+
+<br><br>
+
+<button type="submit">
+Split PDF
+</button>
+
+</form>
+
+</div>
+
+</body>
+</html>

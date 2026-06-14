@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Video Converter</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+
+<div class="converter-box">
+    <form action="/convert-video" method="POST" enctype="multipart/form-data"></form>
+
+    <h1>Video Converter</h1>
+
+  <input type="file" name="video" required>
+
+<select name="format">
+    <option value="mp4">MP4</option>
+    <option value="avi">AVI</option>
+    <option value="mov">MOV</option>
+    <option value="mkv">MKV</option>
+</select>
+
+<button type="submit">
+    Convert Video
+</button>
+</form>
+</div>
+</body>
+</html>

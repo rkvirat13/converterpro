@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>QR Generator</title>
+
+    <link rel="stylesheet"
+    href="{{ url_for('static',
+    filename='css/style.css') }}">
+</head>
+
+<body>
+
+<div class="converter-box">
+
+<h1>QR Generator</h1>
+
+<form method="POST"
+action="/generate-qr">
+
+<input
+type="text"
+name="data"
+placeholder="Enter URL or Text"
+required>
+
+<button type="submit">
+Generate QR
+</button>
+
+</form>
+
+</div>
+
+</body>
+</html>

@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Document Converter</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+
+<div class="converter-box">
+    <h1>Document Converter</h1>
+
+    <form method="POST" action="/convert-document" enctype="multipart/form-data">
+        <input type="file" name="document" required>
+
+        <select name="format">
+            <option value="pdf">PDF</option>
+            <option value="docx">DOCX</option>
+            <option value="txt">TXT</option>
+        </select>
+
+        <button type="submit">Convert Document</button>
+    </form>
+</div>
+
+</body>
+</html>

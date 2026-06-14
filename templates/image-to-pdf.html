@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Image To PDF</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+
+<div class="converter-box">
+
+<h1>Image To PDF</h1>
+
+<form action="/image-to-pdf" method="POST" enctype="multipart/form-data">
+    <input type="file" name="image" required>
+    <button type="submit">Convert Image</button>
+</form>
+
+</div>
+
+</body>
+</html>

@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Ebook Converter</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+
+<div class="converter-box">
+    <h1>Ebook Converter</h1>
+
+    <form method="POST" action="/convert-ebook" enctype="multipart/form-data">
+        <input type="file" name="ebook" required>
+
+        <select name="format">
+            <option value="epub">EPUB</option>
+            <option value="mobi">MOBI</option>
+        </select>
+
+        <button type="submit">Convert Ebook</button>
+    </form>
+</div>
+
+</body>
+</html>

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+<title>GIF Converter</title>
+
+<link rel="stylesheet"
+href="{{ url_for('static', filename='css/style.css') }}">
+
+</head>
+<body>
+
+<div class="converter-box">
+
+<h1>GIF Converter</h1>
+
+<form method="POST"
+action="/convert-gif"
+enctype="multipart/form-data">
+
+<input type="file"
+name="gif"
+required>
+
+<select name="format">
+    <option value="webp">GIF → WEBP</option>
+</select>
+
+<button type="submit">
+Convert GIF
+</button>
+
+</form>
+
+</div>
+
+</body>
+</html>

@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Word To PDF</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+
+<div class="converter-box">
+
+<h1>Word To PDF</h1>
+
+<form action="/word-to-pdf" method="POST" enctype="multipart/form-data">
+    <input type="file" name="file" required>
+    <button type="submit">Convert Word</button>
+</form>
+
+</div>
+
+</body>
+</html>

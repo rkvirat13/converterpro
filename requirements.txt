@@ -1,0 +1,11 @@
+Flask
+Pillow
+pandas
+openpyxl
+python-pptx
+qrcode
+py7zr
+cairosvg
+fpdf
+flask-mail
+requests

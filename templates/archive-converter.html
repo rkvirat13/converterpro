@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Archive Converter</title>
+
+    
+          <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+
+<div class="converter-box">
+
+    <h1>Archive Converter</h1>
+
+    <form method="POST"
+          action="/convert-archive"
+          enctype="multipart/form-data">
+
+        <input type="file"
+               name="archive"
+               required>
+
+        <select name="action">
+
+            <option value="extract">
+                Extract Archive
+            </option>
+
+            <option value="zip_to_7z">
+                ZIP → 7Z
+            </option>
+
+            <option value="rar_to_zip">
+                RAR → ZIP
+            </option>
+
+        </select>
+
+        <button type="submit">
+            Convert Archive
+        </button>
+
+    </form>
+
+</div>
+
+</body>
+</html>

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+<title>Excel Converter</title>
+
+<link rel="stylesheet"
+href="{{ url_for('static', filename='css/style.css') }}">
+
+</head>
+<body>
+
+<div class="converter-box">
+
+<h1>Excel Converter</h1>
+
+<form method="POST"
+action="/convert-excel"
+enctype="multipart/form-data">
+
+<input type="file"
+name="excel"
+accept=".xlsx,.xls"
+required>
+
+<select name="format">
+
+<option value="csv">Excel → CSV</option>
+<option value="json">Excel → JSON</option>
+<option value="html">Excel → HTML</option>
+<option value="pdf">Excel → PDF</option>
+
+</select>
+
+<button type="submit">
+Convert Excel
+</button>
+
+</form>
+
+</div>
+
+</body>
+</html>

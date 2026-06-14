@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Video Compress</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+
+<div class="converter-box">
+
+    <h1>Video Compress</h1>
+
+    <form action="/compress-video" method="POST" enctype="multipart/form-data">
+
+        <input type="file" name="video" required>
+
+        <br><br>
+
+        <button type="submit">
+            Compress Video
+        </button>
+
+    </form>
+
+</div>
+</body>
+</html>

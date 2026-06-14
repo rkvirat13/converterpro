@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>URL Converter</title>
+
+    <link rel="stylesheet"
+    href="{{ url_for('static',
+    filename='css/style.css') }}">
+</head>
+<body>
+
+<div class="converter-box">
+
+    <h1>URL Converter</h1>
+
+    <form method="POST"
+          action="/convert-url">
+
+        <input
+            type="text"
+            name="url"
+            placeholder="Enter File URL"
+            required>
+
+        <button type="submit">
+            Download File
+        </button>
+
+    </form>
+
+</div>
+
+</body>
+</html>

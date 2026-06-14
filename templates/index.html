@@ -1,0 +1,366 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Converter Clone</title>
+
+    <link rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+    <link rel="stylesheet"
+    href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+
+<nav>
+    <div class="logo">
+
+⚡ ConvertPro
+
+</div>
+
+    <ul>
+    <li><a href="#formats">Formats</a></li>
+    <li><a href="#blogs">Blogs</a></li>
+    <li><a href="/about">About</a></li>
+    <li><a href="#faq">FAQ</a></li>
+</ul>
+<button onclick="toggleDarkMode()" id="darkBtn">
+🌙 Dark Mode
+</button>
+</nav>
+
+<section class="hero">
+    <h1>Free Online File Converter</h1>
+    <p>Convert Images, Documents, Videos and Audio Files</p>
+
+    <form action="/convert" method="POST" enctype="multipart/form-data" class="upload-box">
+
+        <input type="file" name="image" required>
+
+        <select name="format">
+            <option value="PNG">PNG</option>
+            <option value="JPG">JPG</option>
+            <option value="WEBP">WEBP</option>
+        </select>
+
+        <button type="submit">
+            Convert File
+        </button>
+
+    </form>
+</section>
+<section class="stats">
+
+<div class="stat-box">
+<h2>40+</h2>
+<p>Converter Tools</p>
+</div>
+
+<div class="stat-box">
+<h2>1M+</h2>
+<p>Files Converted</p>
+</div>
+
+<div class="stat-box">
+<h2>99.9%</h2>
+<p>Uptime</p>
+</div>
+
+<div class="stat-box">
+<h2>24/7</h2>
+<p>Online Service</p>
+</div>
+
+</section>
+
+<section class="search-box">
+
+    <input
+    type="text"
+    id="searchInput"
+    placeholder="Search converter..."
+    onkeyup="searchCards()">
+
+</section>
+
+
+<section class="cards" id="formats">
+
+<div class="card searchable"
+onclick="location.href='/image-converter'">
+
+<h2>🖼️ Image Converter</h2>
+
+<p>Convert JPG, PNG, WEBP, GIF</p>
+
+</div>
+
+<div class="card searchable"
+     onclick="location.href='/video-converter'">
+<h2>Video Converter</h2>
+<p>Convert MP4, AVI, MOV, MKV</p>
+</div>
+
+<div class="card searchable"
+     onclick="location.href='/audio-converter'">
+    <h2>Audio Converter</h2>
+    <p>Convert MP3, WAV, AAC, OGG</p>
+</div>
+
+<div class="card searchable"
+     onclick="location.href='/document-converter'">
+    <h2>Document Converter</h2>
+    <p>Convert PDF, DOCX, TXT</p>
+</div>
+
+<div class="card searchable" 
+onclick="location.href='/archive-converter'">
+<h2>Archive Converter</h2>
+<p>Convert ZIP, RAR, 7Z</p>
+</div>
+
+<div class="card searchable"
+onclick="location.href='/ebook-converter'">
+<h2>Ebook Converter</h2>
+<p>Convert EPUB, MOBI</p>
+</div>
+
+
+<div class="card searchable"
+onclick="location.href='/pdf-merge'">
+
+<h2>PDF Merge</h2>
+
+<p>Merge Multiple PDF Files</p>
+
+</div>
+
+<div class="card searchable"
+onclick="location.href='/pdf-split'">
+
+<h2>PDF Split</h2>
+
+<p>Extract Any PDF Page</p>
+
+</div>
+<div class="card searchable">
+<h2>Image Compress</h2>
+<p>Compress JPG, PNG, WEBP</p>
+</div>
+
+<div class="card searchable"
+     onclick="location.href='/video-compress'">
+
+    <h2>Video Compress</h2>
+    <p>Reduce Video Size</p>
+
+</div>
+
+<div class="card searchable"
+onclick="location.href='/qr-generator'">
+
+<h2>QR Generator</h2>
+
+<p>Create QR Codes Online</p>
+
+</div>
+
+<div class="card searchable"
+onclick="location.href='/screenshot-tool'">
+
+<h2>Screenshot Tool</h2>
+<p>Take Website Screenshots</p>
+
+</div>
+
+<div class="card searchable"
+onclick="location.href='/url-converter'">
+
+    <h2>URL Converter</h2>
+
+    <p>Convert Web Resources</p>
+
+</div>
+<div class="card searchable"
+onclick="location.href='/pdf-converter'">
+
+<h2>📄 PDF Converter</h2>
+<p>Convert PDF to JPG PNG WEBP</p>
+
+</div>
+
+<div class="card searchable"
+onclick="location.href='/word-converter'">
+
+<h2>📝 Word Converter</h2>
+<p>Convert DOC DOCX Files</p>
+
+</div>
+<div class="card searchable"
+onclick="location.href='/image-to-pdf-converter'">
+
+<h2>Image To PDF</h2>
+<p>Convert JPG PNG WEBP To PDF</p>
+
+</div>
+<div class="card searchable"
+onclick="location.href='/excel-converter'">
+
+<h2>Excel Converter</h2>
+<p>Convert XLS XLSX Files</p>
+
+</div>
+
+<div class="card searchable"
+onclick="location.href='/powerpoint-converter'">
+
+<h2>PowerPoint Converter</h2>
+<p>Convert PPT PPTX Files</p>
+
+</div>
+
+<div class="card searchable"
+onclick="location.href='/gif-converter'">
+
+<h2>GIF Converter</h2>
+<p>Convert Animated GIF Files</p>
+
+</div>
+
+<div class="card searchable"
+onclick="location.href='/svg-converter'">
+
+<h2>SVG Converter</h2>
+<p>Convert SVG Graphics</p>
+
+</div>
+<div class="card searchable"
+onclick="location.href='/pdf-compress'">
+
+<h2>PDF Compress</h2>
+
+<p>Reduce PDF Size Online</p>
+
+</div>
+
+
+
+</section>
+<section class="faq" id="faq">
+
+<h2>Frequently Asked Questions</h2>
+
+<details>
+<summary>Are my files safe?</summary>
+<p>Yes. Uploaded files remain private.</p>
+</details>
+
+<details>
+<summary>How long does conversion take?</summary>
+<p>Usually only a few seconds.</p>
+</details>
+
+</section>
+<section class="cta" id="blogs">
+
+    <h2>Latest Blogs</h2>
+
+    <p>
+        Tips, Guides and Converter Tutorials
+    </p>
+
+    <button>
+        Read Blogs
+    </button>
+
+</section>
+<footer class="footer">
+
+<div class="footer-container">
+
+<div class="footer-col">
+
+<h3>⚡ ConvertPro</h3>
+
+<p>No software installation needed.</p>
+
+<div class="social-icons">
+
+<a href="#">
+<i class="fab fa-facebook-f"></i>
+</a>
+
+<a href="#">
+<i class="fab fa-twitter"></i>
+</a>
+
+<a href="#">
+<i class="fab fa-linkedin-in"></i>
+</a>
+
+<a href="#">
+<i class="fab fa-github"></i>
+</a>
+
+</div>
+
+</div>
+
+<div class="footer-col">
+    <h4>Why ConvertPro?</h4>
+
+    <p>🚀 Fast Processing</p>
+    <p>🔒 Secure & Private</p>
+    <p>☁️ Cloud Based</p>
+    <p>📁 40+ Tools</p>
+    <p>🌍 Available 24/7</p>
+</div>
+
+<div class="footer-col">
+<h4>Company</h4>
+<a href="/about">About</a>
+<a href="/privacy">Privacy Policy</a>
+<a href="/contact">Contact</a>
+<a href="/disclaimer">Disclaimer</a>
+</div>
+
+</div>
+
+<div class="footer-bottom">
+© 2026 Converter Clone
+</div>
+
+
+<script>
+
+function searchCards(){
+
+    let input =
+    document.getElementById("searchInput")
+    .value
+    .toLowerCase();
+
+    let cards =
+    document.querySelectorAll(".searchable");
+
+    cards.forEach(card=>{
+
+        let text =
+        card.innerText.toLowerCase();
+
+        if(text.includes(input)){
+            card.style.display="block";
+        }else{
+            card.style.display="none";
+        }
+
+    });
+
+}
+function toggleDarkMode(){
+    document.body.classList.toggle("dark-mode");
+}
+
+</script>
+</body>
+</html>

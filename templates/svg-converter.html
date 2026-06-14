@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+<title>SVG Converter</title>
+
+<link rel="stylesheet"
+href="{{ url_for('static', filename='css/style.css') }}">
+
+</head>
+<body>
+
+<div class="converter-box">
+
+<h1>SVG Converter</h1>
+
+<form method="POST"
+action="/convert-svg"
+enctype="multipart/form-data">
+
+<input type="file"
+name="svg"
+accept=".svg"
+required>
+
+<select name="format">
+
+<option value="png">SVG → PNG</option>
+
+</select>
+
+<button type="submit">
+Convert SVG
+</button>
+
+</form>
+
+</div>
+
+</body>
+</html>

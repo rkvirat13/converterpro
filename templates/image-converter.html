@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Image Converter</title>
+<link rel="stylesheet"
+href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+
+<body>
+
+<body>
+
+<nav>
+    <div class="logo">CONVERTER</div>
+
+    <ul>
+        <li onclick="location.href='/'">Home</li>
+    </ul>
+</nav>
+
+<section class="hero">
+
+    <h1>Image Converter</h1>
+
+    <p>Convert JPG, PNG, WEBP Images</p>
+
+    <form action="/convert"
+          method="POST"
+          enctype="multipart/form-data"
+          class="upload-box">
+
+        <input type="file"
+               name="image"
+               required>
+
+        <select name="format">
+            <option value="PNG">PNG</option>
+            <option value="JPG">JPG</option>
+            <option value="WEBP">WEBP</option>
+        </select>
+
+        <button type="submit">
+            Convert Image
+        </button>
+
+    </form>
+    <img id="preview"
+     style="max-width:300px;
+     margin-top:20px;
+     display:none;">
+
+</section>
+<script>
+
+document
+.querySelector('input[type="file"]')
+.addEventListener('change', function(e){
+
+    const file = e.target.files[0];
+
+    if(file){
+
+        const reader = new FileReader();
+
+        reader.onload = function(){
+
+            const preview =
+            document.getElementById("preview");
+
+            preview.src =
+            reader.result;
+
+            preview.style.display =
+            "block";
+
+        }
+
+        reader.readAsDataURL(file);
+
+    }
+
+});
+
+</script>
+</body>
+
+
+</html>
