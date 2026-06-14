@@ -10,5 +10,5 @@ fpdf
 flask-mail
 requests
 gunicorn
-pikepdf
 pdf2image
+pikepdf
