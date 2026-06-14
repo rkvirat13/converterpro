@@ -9,3 +9,5 @@ cairosvg
 fpdf
 flask-mail
 requests
+gunicorn
+pikepdf
