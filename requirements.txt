@@ -17,7 +17,7 @@ pikepdf==10.7.3
 pillow==12.2.0
 pipreqs==0.4.13
 PyPDF2==3.0.1
-
+gunicorn==23.0.0
 requests==2.34.2
 tqdm==4.68.1
 urllib3==2.7.0
